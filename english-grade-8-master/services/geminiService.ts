@@ -2,7 +2,7 @@ import { GoogleGenAI, Type, Schema } from "@google/genai";
 import { Question } from '../types';
 import { CURRICULUM_CONTEXT } from '../constants';
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
 
 export const generateQuizQuestions = async (topic: string): Promise<Question[]> => {
   const prompt = `
